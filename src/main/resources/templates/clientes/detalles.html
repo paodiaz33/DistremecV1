@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Detalles del Cliente</title>
+</head>
+<body style="background-image: linear-gradient(to left,rgb(114, 145, 212),rgb(101, 21, 230));">
+    <h1>Detalles del Cliente</h1>
+    <div>
+        <p><strong>Nombre:</strong> <span th:text="${cliente.nombre}">Nombre</span></p>
+        <p><strong>Apellido:</strong> <span th:text="${cliente.apellido}">Apellido</span></p>
+        <p><strong>Telefono:</strong> <span th:text="${cliente.telefono}">Telefono</span></p>
+    </div>
+    <a th:href="@{/clientes/}">Volver al listado</a>
+</body>
+</html>
