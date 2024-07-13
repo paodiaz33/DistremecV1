@@ -23,7 +23,6 @@ import jakarta.servlet.http.HttpServletRequest;
 
 
 @Controller
-@SessionAttributes("cliente")
 @RequestMapping("/clientes")
 public class ClienteController {
 

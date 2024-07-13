@@ -19,9 +19,16 @@ public class FacturaController {
     private ProductoService productoService;
 
     @GetMapping("/venta")
-    public String login(Model model) {        
+    public String venta(Model model) {        
         List<Producto> productos = productoService.obtenerTodosLosProductos();
         model.addAttribute("productos", productos);        
         return "facturas/facturaVenta";
+    }
+
+    @GetMapping("/compra")
+    public String compra(Model model) {        
+        List<Producto> productos = productoService.obtenerTodosLosProductos();
+        model.addAttribute("productos", productos);        
+        return "facturas/facturaCompra";
     }
 }

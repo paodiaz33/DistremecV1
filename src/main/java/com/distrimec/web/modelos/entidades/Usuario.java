@@ -62,71 +62,7 @@ public class Usuario implements UserDetails{
     @Enumerated(EnumType.STRING) 
     private Role role;
 
-    // Getters and Setters
-
-    public Integer getCodUsuario() {
-        return codUsuario;
-    }
-
-    public void setCodUsuario(Integer codUsuario) {
-        this.codUsuario = codUsuario;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public Integer getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(Integer cedula) {
-        this.cedula = cedula;
-    }
-
-    public Integer getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(Integer telefono) {
-        this.telefono = telefono;
-    }
-
-    public Ciudad getCiudad() {
-        return ciudad;
-    }
-
-    public void setCiudad(Ciudad ciudad) {
-        this.ciudad = ciudad;
-    }
-
-    public Cargo getCargo() {
-        return cargo;
-    }
-
-    public void setCargo(Cargo cargo) {
-        this.cargo = cargo;
-    }
-
-    public String getContraseña() {
-        return contraseña;
-    }
-
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
-    }
+    
 
 
     @Override
