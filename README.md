@@ -140,4 +140,4 @@ Este proyecto está bajo la licencia **MIT**. Consulta el archivo `LICENSE` para
 
 ## Contacto
 
-Para más información o soporte, contacta a **jorscastro** a través de [GitHub](https://github.com/jorscastro).
+Para más información o soporte, contacta a **Paola diaz** a través de https://droti.site/hv/#contacto.
