@@ -32,13 +32,15 @@
                                 <label for="password">Password:</label>
                                 <input type="password" class="form-control" id="password" name="password" required />
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block mt-3">Iniciar sesión</button>
-                            <a href="#" class="btn btn-secondary btn-block mt-3 ml-3">He olvidado la contraseña</a>
-                            <hr>
-                            <button type="button" class="btn btn-info btn-block">Otras opciones de inicio de sesión</button>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-block mt-3">Iniciar sesión</button>
+                            </div>
                         </form>
                         <div class="alert alert-danger mt-3" th:if="${error != null}"
                             th:text="${error}"></div>
+                        <div class="text-center mt-3">
+                            <a href="#">olvide mi contraseña</a>
+                        </div>
                         <div class="text-center mt-3">
                             <a href="#">¿No tienes una cuenta? Regístrate</a>
                         </div>

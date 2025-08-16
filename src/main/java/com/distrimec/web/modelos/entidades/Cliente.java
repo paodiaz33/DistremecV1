@@ -32,6 +32,9 @@ public class Cliente {
     @Column(name = "apellido", length = 45)
     private String apellido;
 
+    @Column(name = "correo", length = 45)
+    private String correo;
+
     // Getters and Setters
 
     public Integer getIdCliente() {
@@ -72,5 +75,13 @@ public class Cliente {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 }

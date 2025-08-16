@@ -1,5 +1,5 @@
 package com.distrimec.web.controladores;
-import com.distrimec.web.modelos.entidades.Cliente;
+
 import com.distrimec.web.modelos.entidades.Proveedor;
 import com.distrimec.web.servicios.ProveedorServicio;
 import org.springframework.stereotype.Controller;
@@ -52,6 +52,7 @@ public class ProveedorController {
         proveedorActual.setNit(proveedor.getNit());
         proveedorActual.setDireccion(proveedor.getDireccion());
         proveedorActual.setTelefono(proveedor.getTelefono());
+        proveedorActual.setCorreo(proveedor.getCorreo());
         proveedorServicio.actualizarProveedor(proveedorActual);
         model.addAttribute("proveedores", proveedorServicio.listarProveedores());
         return "redirect:/proveedores/";

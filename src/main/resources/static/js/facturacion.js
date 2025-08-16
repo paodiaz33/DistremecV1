@@ -56,16 +56,33 @@ function eliminarProductoDeTabla(index) {
 function calcularTotal() {
     const total = productosEnTabla.reduce((acc, producto) => acc + producto.subtotal(), 0);
     $('#totalFactura').text(total.toFixed(2));
+    return total;
+}
+
+function obtenerCliente(){
+    const clienteSelect = $('#clienteSelect');
+    const clienteSeleccionado =  clienteSelect.find('option:selected');
+    return clienteSeleccionado.val();
+}
+
+function obtenerProveedor(){
+    const proveedorSelect = $('#proveedorSelect');
+    const proveedorSelececionado = proveedorSelect.find('option:selected');
+    return proveedorSelececionado.val();
 }
 
 function guardarFactura() {
     // Implementar lógica para enviar los productosEnTabla y el total
-    /*const data = {
+    const data = {
+        cliente: obtenerCliente(),
+        proveedor: obtenerProveedor(),
         productos: productosEnTabla,
         total: calcularTotal()
     };
 
-    fetch('/guardarFactura', {
+    console.log(data);
+
+    fetch('/factura/guardarFactura', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -78,7 +95,7 @@ function guardarFactura() {
     })
     .catch(error => {
         console.error('Error al guardar la factura:', error);
-    });*/
+    });
     // a un servidor o API para guardar la factura. Esto podría hacerse con $.ajax o $.post de jQuery.
 
     console.log('Guardar factura:', productosEnTabla);

@@ -24,11 +24,15 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 form-group">
+                        <div class="col-md-4 form-group">
                             <label for="telefono">Telefono:</label>
                             <input type="text" id="telefono" name="telefono" th:value="*{telefono}" class="form-control" />
                         </div>
-                        <div class="col-md-6 form-group">
+                        <div class="col-md-4 form-group">
+                            <label for="correo">Correo:</label>
+                            <input type="email" placeholder="example@example.com" id="correo" name="correo" th:value="*{correo}" class="form-control" />
+                        </div>
+                        <div class="col-md-4 form-group">
                             <label for="ciudad">Ciudad:</label>
                             <select id="ciudad" name="ciudad.idCiudad" class="form-control">
                                 <option value="">Seleccione una Ciudad</option>
@@ -51,11 +55,15 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 form-group">
+                        <div class="col-md-4 form-group">
                             <label for="telefono">Telefono:</label>
                             <input type="text" id="telefono" name="telefono" th:value="*{telefono}" class="form-control" />
                         </div>
-                        <div class="col-md-6 form-group">
+                        <div class="col-md-4 form-group">
+                            <label for="correo">Correo:</label>
+                            <input type="email" id="correo" name="correo" th:value="*{correo}" class="form-control" />
+                        </div>
+                        <div class="col-md-4 form-group">
                             <label for="ciudad">Ciudad:</label>
                             <select id="ciudad" name="ciudad.idCiudad" class="form-control">
                                 <option value="">Seleccione una Ciudad</option>

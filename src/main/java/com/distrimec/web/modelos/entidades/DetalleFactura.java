@@ -9,7 +9,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import java.math.BigDecimal;
 
 @Entity
 @Table(name = "factuprovemedi")
@@ -30,10 +29,13 @@ public class DetalleFactura {
     private Integer cantidad;
 
     @Column(name = "iva")
-    private BigDecimal iva;
+    private Double iva;
 
     @Column(name = "subtotal")
-    private BigDecimal subtotal;
+    private Double subtotal;
+
+    @Column(name = "valor")
+    private Double valor;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "productocod", referencedColumnName = "codproducto", insertable = false, updatable = false)
@@ -75,20 +77,28 @@ public class DetalleFactura {
         this.cantidad = cantidad;
     }
 
-    public BigDecimal getIva() {
+    public Double getIva() {
         return iva;
     }
 
-    public void setIva(BigDecimal iva) {
+    public void setIva(Double iva) {
         this.iva = iva;
     }
 
-    public BigDecimal getSubtotal() {
+    public Double getSubtotal() {
         return subtotal;
     }
 
-    public void setSubtotal(BigDecimal subtotal) {
-        this.subtotal = subtotal;
+    public void setSubtotal(Double d) {
+        this.subtotal = d;
+    }
+
+    public Double getValor() {
+        return valor;
+    }
+
+    public void setValor(Double d) {
+        this.valor = d;
     }
 
     public Producto getProducto() {

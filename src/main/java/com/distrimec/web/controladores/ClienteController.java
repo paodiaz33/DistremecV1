@@ -92,6 +92,7 @@ public class ClienteController {
         clienteActual.setApellido(cliente.getApellido());
         clienteActual.setTelefono(cliente.getTelefono());
         clienteActual.setCiudad(cliente.getCiudad());
+        clienteActual.setCorreo(cliente.getCorreo());
         clienteService.actualizarCliente(idCliente,clienteActual);
         model.addAttribute("clientes", clienteService.obtenerTodosLosClientes());
         return "redirect:/clientes/";

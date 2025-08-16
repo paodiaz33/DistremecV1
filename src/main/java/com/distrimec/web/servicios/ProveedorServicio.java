@@ -43,4 +43,8 @@ public class ProveedorServicio {
     public void eliminarProveedor(Integer id) {
         proveedorRepositorio.deleteById(id);
     }
+
+    public List<Proveedor> obtenerTodosLosProveedores() {
+        return proveedorRepositorio.findAll();
+    }
 }

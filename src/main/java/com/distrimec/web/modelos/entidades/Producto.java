@@ -19,7 +19,7 @@ public class Producto {
     private Integer codProducto;
 
     @Column(name = "producto", length = 20)
-    private String producto;
+    private String nombreProducto;
 
     @Column(name = "lote")
     private Integer lote;
@@ -48,12 +48,12 @@ public class Producto {
         this.codProducto = codProducto;
     }
 
-    public String getProducto() {
-        return producto;
+    public String getNombreProducto() {
+        return nombreProducto;
     }
 
-    public void setProducto(String producto) {
-        this.producto = producto;
+    public void setNombreProducto(String nombreProducto) {
+        this.nombreProducto = nombreProducto;
     }
 
     public Integer getLote() {

@@ -25,8 +25,11 @@ public class Proveedor {
     @Column(name = "nit")
     private Integer nit;
 
-    @Column(name = "direcciòn", length = 30)
+    @Column(name = "direccion", length = 30)
     private String direccion;
+
+    @Column(name = "correo", length = 45)
+    private String correo;
 
     // Getters and Setters
 
@@ -70,5 +73,12 @@ public class Proveedor {
         this.direccion = direccion;
     }
 
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
     
 }

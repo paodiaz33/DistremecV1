@@ -11,11 +11,17 @@
 <div class="container mt-5">
     <div th:replace="~{fragments/header :: header}"></div>
     <h2>Factura de Venta</h2>
-    <div class="row">
+    <div class="col-md-6">
+        <label for="clienteSelect">Cliente:</label>
+        <select class="form-control" id="clienteSelect">
+            <option th:each="cliente : ${clientes}" th:value="${cliente.idCliente}" th:text="${cliente.nombre} +' '+${cliente.apellido}"></option>
+        </select>
+    </div>
+    <div class="row mt-5">
         <div class="col-md-6">
             <label for="productoSelect">Producto:</label>
             <select class="form-control" id="productoSelect">
-                <option th:each="producto : ${productos}" th:value="${producto.codProducto}" th:text="${producto.producto}" th:data-precio="${producto.precio}"></option>
+                <option th:each="producto : ${productos}" th:value="${producto.codProducto}" th:text="${producto.nombreProducto}" th:data-precio="${producto.precio}"></option>
             </select>
         </div>
         <div class="col-md-6">

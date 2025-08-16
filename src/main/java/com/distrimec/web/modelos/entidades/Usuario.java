@@ -46,7 +46,10 @@ public class Usuario implements UserDetails{
     private Integer cedula;
 
     @Column(name = "telefono")
-    private Integer telefono;
+    private String telefono;
+
+    @Column(name = "correo")
+    private String correo;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ciudadid", referencedColumnName = "idciudad")

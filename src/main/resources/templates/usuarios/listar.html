@@ -10,14 +10,14 @@
         .btn-editar {
             background-color: #007bff;
             color: white;
-            padding: 5px 10px;
+            padding: 2px 5px;
             border-radius: 5px;
             text-decoration: none;
         }
         .btn-eliminar {
             background-color: #dc3545;
             color: white;
-            padding: 5px 10px;
+            padding: 2px 5px;
             border-radius: 5px;
             text-decoration: none;
         }
@@ -30,14 +30,15 @@
             <table class="table table-hover table-dark">
                 <thead class="thead-dark">
                     <tr>
-                        <th>Código</th>
+                        <th>codigo</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Cédula</th>
                         <th>Teléfono</th>
+                        <th>Correo</th>
                         <th>Ciudad</th>
                         <th>Cargo</th>
-                        <th>Acciones</th>
+                        <th style="width: 300px">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,8 +48,9 @@
                         <td th:text="${usuario.apellido}">Apellido</td>
                         <td th:text="${usuario.cedula}">Cédula</td>
                         <td th:text="${usuario.telefono}">Teléfono</td>
+                        <td th:text="${usuario.correo}">Teléfono</td>
                         <td th:text="${usuario.ciudad.descriCiudad}">Ciudad</td>
-                        <td th:text="${usuario.cargo.descripcion}">Cargo</td>
+                        <td th:text="${usuario.cargo.nombre}">Cargo</td>
                         <td>
                             <a class="btn-editar" th:href="@{'/usuarios/' + ${usuario.codUsuario} + '/editar'}">Editar</a>
                             <a class="btn-eliminar" th:href="@{'/usuarios/' + ${usuario.codUsuario} + '/eliminar'}">Eliminar</a>
